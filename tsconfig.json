@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-month-picker": [
+        "dist/ngx-month-picker"
+      ],
+      "ngx-month-picker/*": [
+        "dist/ngx-month-picker/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
