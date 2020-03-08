@@ -1,0 +1,136 @@
+.month-picker {
+    position: relative;
+    display: inline-block;
+}
+.month-picker .input-container {
+    display:flex;
+}
+.input-container .calendar-icon {
+    margin-left: 5px;
+    cursor: pointer;
+}
+.month-picker .form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.month-picker .form-control[readonly] {
+    background-color: #F3F4F5;
+}
+
+.month-picker .month-picker-container {
+    padding: 15px;
+    display: block;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 99;
+}
+.month-picker-container .month-picker-header {
+    display: flex;
+    justify-content: space-between;
+    min-width: 270px;
+    padding: 10px;
+    border-radius: 3px 3px 0 0;
+    background-color: #1976d2;
+}
+.month-picker-container button {
+    vertical-align: top;
+    padding: 0;
+    height: 30px;
+    line-height: 30px;
+    border: 0;
+    background: transparent;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s;
+}
+.month-picker-container button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.month-picker-container button:focus{
+    outline: none;
+}
+.month-picker-container button.previous {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+.month-picker-container button.previous span{
+    font-size: 28px;
+    line-height: 1;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.month-picker-container button.next {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+.month-picker-container button.next span{
+    font-size: 28px;
+    line-height: 1;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.month-picker-container button.current {
+    border-radius: 15px;
+    max-width: 155px;
+    padding: 0 13px;
+}
+.month-picker-container button.current span{
+    font-size: 18px;
+}
+.month-picker-container .month-picker-body {
+    padding: 10px;
+    border-radius: 0 0 3px 3px;
+    min-height: 205px;
+    min-width: 278px;
+    border: 1px solid #dee2e6;
+}
+.month-picker-container .month-picker-body table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.month-picker-container .month-picker-body table td {
+    height: 52px;
+    color: #54708b;
+    text-align: center;
+    padding: 0;
+    border: none;
+}
+
+.month-picker-container .month-picker-body table td span {
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+    font-size: 13px;
+    position: relative;
+}
+.month-picker-container .month-picker-body table td span:hover {
+    background-color: #e9edf0;
+}
+.month-picker-container .month-picker-body table td span.active{
+    background-color: #e9edf0;
+}

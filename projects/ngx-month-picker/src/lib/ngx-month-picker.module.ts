@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
+import { BrowserModule, } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+
 import { NgxMonthPickerComponent } from './ngx-month-picker.component';
-
-
 
 @NgModule({
   declarations: [NgxMonthPickerComponent],
   imports: [
+    BrowserModule,
+    FormsModule,
   ],
   exports: [NgxMonthPickerComponent]
 })
