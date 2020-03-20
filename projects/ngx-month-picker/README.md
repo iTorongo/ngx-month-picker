@@ -1,24 +1,53 @@
-# NgxMonthPicker
+# ngx-month-picker
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.14.
+`ngx-month-picker` is a simple month picker for angular application.
 
-## Code scaffolding
+## Features
+* Simple layout
+* Enable/disable form control
+* Can be used as an angular form control
+* Customize functionality
 
-Run `ng generate component component-name --project ngx-month-picker` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-month-picker`.
-> Note: Don't forget to add `--project ngx-month-picker` or else it will be added to the default project in your `angular.json` file. 
+## Installation
 
-## Build
+* `npm install ngx-month-picker --save`
 
-Run `ng build ngx-month-picker` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Usage
 
-## Publishing
+* `import { NgxMonthPickerModule } from 'ngx-month-picker';`
 
-After building your library with `ng build ngx-month-picker`, go to the dist folder `cd dist/ngx-month-picker` and run `npm publish`.
+* add `NgxMonthPickerModule` to the imports of your NgModule
 
-## Running unit tests
+```ts
+// app.module.ts
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { NgxMonthPickerModule } from 'ngx-month-picker';
+import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
-Run `ng test ngx-month-picker` to execute the unit tests via [Karma](https://karma-runner.github.io).
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    NgxMonthPickerModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-## Further help
+And you are good to go...
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Use it in your anywhere in your application
+
+````
+<ngx-loader-spinner></ngx-loader-spinner>
+````
+
+Inject `NgxLoaderSpinnerService` in your component constructor.<br>
+Show or hide the loader by using `NgxLoaderSpinnerService.show()` and `NgxLoaderSpinnerService.hide()`

@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { NgxMonthPickerModule } from 'ngx-month-picker';
 
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     NgxMonthPickerModule
   ],
   providers: [],

@@ -1,27 +1,50 @@
-# NgxMonthPicker
+# ngx-month-picker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+`ngx-month-picker` is a simple month picker for angular application.
 
-## Development server
+## Features
+* Simple layout
+* Enable/disable form control
+* Can be used as an angular form control
+* Customize functionality
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Installation
 
-## Code scaffolding
+* `npm install ngx-month-picker --save`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Usage
 
-## Build
+* `import { NgxMonthPickerModule } from 'ngx-month-picker';`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* add `NgxMonthPickerModule` to the imports of your NgModule
 
-## Running unit tests
+```ts
+// app.module.ts
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { NgxMonthPickerModule } from 'ngx-month-picker';
+import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    NgxMonthPickerModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-## Running end-to-end tests
+And you are good to go...
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Use it in your anywhere in your application
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+````
+<ngx-month-picker [(ngModel)]="currentMonth"></ngx-month-picker>
+````
