@@ -1,11 +1,11 @@
 {
-  "name": "ngx-month-picker",
+  "name": "ng-month-picker",
   "version": "1.0.0",
   "author": "Arnaf Aziz Torongo",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/iTorongo/ngx-month-picker.git"
+    "url": "https://github.com/iTorongo/ng-month-picker.git"
   },
   "contributors": [],
   "keywords": [

@@ -3,33 +3,33 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-month-picker": {
+    "ng-month-picker": {
       "projectType": "library",
-      "root": "projects/ngx-month-picker",
-      "sourceRoot": "projects/ngx-month-picker/src",
+      "root": "projects/ng-month-picker",
+      "sourceRoot": "projects/ng-month-picker/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/ngx-month-picker/tsconfig.lib.json",
-            "project": "projects/ngx-month-picker/ng-package.json"
+            "tsConfig": "projects/ng-month-picker/tsconfig.lib.json",
+            "project": "projects/ng-month-picker/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ngx-month-picker/src/test.ts",
-            "tsConfig": "projects/ngx-month-picker/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-month-picker/karma.conf.js"
+            "main": "projects/ng-month-picker/src/test.ts",
+            "tsConfig": "projects/ng-month-picker/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-month-picker/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ngx-month-picker/tsconfig.lib.json",
-              "projects/ngx-month-picker/tsconfig.spec.json"
+              "projects/ng-month-picker/tsconfig.lib.json",
+              "projects/ng-month-picker/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -156,5 +156,5 @@
         }
       }
     }},
-  "defaultProject": "ngx-month-picker"
+  "defaultProject": "ng-month-picker"
 }

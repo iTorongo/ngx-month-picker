@@ -19,11 +19,11 @@
       "dom"
     ],
     "paths": {
-      "ngx-month-picker": [
-        "dist/ngx-month-picker"
+      "ng-month-picker": [
+        "dist/ng-month-picker"
       ],
-      "ngx-month-picker/*": [
-        "dist/ngx-month-picker/*"
+      "ng-month-picker/*": [
+        "dist/ng-month-picker/*"
       ]
     }
   },

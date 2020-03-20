@@ -5,17 +5,17 @@ const moment = momentImported;
 
 @Component({
   // tslint:disable-next-line:component-selector
-  selector: 'ngx-month-picker',
-  templateUrl: './ngx-month-picker.component.html',
-  styleUrls: ['./ngx-month-picker.component.css'],
+  selector: 'ng-month-picker',
+  templateUrl: './ng-month-picker.component.html',
+  styleUrls: ['./ng-month-picker.component.css'],
   providers: [{
     provide: NG_VALUE_ACCESSOR,
-    useExisting: NgxMonthPickerComponent,
+    useExisting: NgMonthPickerComponent,
     multi: true
   }],
 })
 
-export class NgxMonthPickerComponent implements OnInit, ControlValueAccessor  {
+export class NgMonthPickerComponent implements OnInit, ControlValueAccessor  {
 
 
   /**

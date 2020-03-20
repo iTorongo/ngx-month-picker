@@ -3,14 +3,14 @@ import { BrowserModule, } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { ClickOutsideDirective } from './click-outside.directive';
 
-import { NgxMonthPickerComponent } from './ngx-month-picker.component';
+import { NgMonthPickerComponent } from './ng-month-picker.component';
 
 @NgModule({
-  declarations: [NgxMonthPickerComponent, ClickOutsideDirective],
+  declarations: [NgMonthPickerComponent, ClickOutsideDirective],
   imports: [
     BrowserModule,
     FormsModule,
   ],
-  exports: [NgxMonthPickerComponent]
+  exports: [NgMonthPickerComponent]
 })
-export class NgxMonthPickerModule { }
+export class NgMonthPickerModule { }

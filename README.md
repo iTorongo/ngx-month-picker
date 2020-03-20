@@ -1,6 +1,6 @@
-# ngx-month-picker
+# ng-month-picker
 
-`ngx-month-picker` is a simple month picker for angular application.
+`ng-month-picker` is a simple month picker for angular application.
 
 ## Features
 * Simple layout
@@ -10,19 +10,19 @@
 
 ## Installation
 
-* `npm install ngx-month-picker --save`
+* `npm install ng-month-picker --save`
 
 ## Usage
 
-* `import { NgxMonthPickerModule } from 'ngx-month-picker';`
+* `import { NgMonthPickerModule } from 'ng-month-picker';`
 
-* add `NgxMonthPickerModule` to the imports of your NgModule
+* add `NgMonthPickerModule` to the imports of your NgModule
 
 ```ts
 // app.module.ts
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgxMonthPickerModule } from 'ngx-month-picker';
+import { NgMonthPickerModule } from 'ng-month-picker';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
@@ -33,7 +33,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
-    NgxMonthPickerModule
+    NgMonthPickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -46,5 +46,5 @@ And you are good to go...
 Use it in your anywhere in your application
 
 ````
-<ngx-month-picker [(ngModel)]="currentMonth"></ngx-month-picker>
+<ng-month-picker [(ngModel)]="currentMonth"></ng-month-picker>
 ````

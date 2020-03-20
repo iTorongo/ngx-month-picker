@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
-import { NgxMonthPickerModule } from 'ngx-month-picker';
+import { NgMonthPickerModule } from 'ng-month-picker';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
@@ -14,7 +14,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
-    NgxMonthPickerModule
+    NgMonthPickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
