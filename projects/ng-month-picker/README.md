@@ -7,6 +7,7 @@
 * Enable/disable form control
 * Can be used as an angular form control
 * Customize functionality
+* Support for angular version 10
 
 ## Installation
 
@@ -22,9 +23,11 @@
 // app.module.ts
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgMonthPickerModule } from 'ng-month-picker';
+
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+
+import { NgMonthPickerModule } from 'ng-month-picker';
 
 @NgModule({
   declarations: [
