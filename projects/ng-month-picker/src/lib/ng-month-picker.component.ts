@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor, FormControl } from '@angular/forms';
-import * as momentImported from 'moment';
-const moment = momentImported;
+import * as dayjsImported from 'dayjs';
+const dayjs = dayjsImported;
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -91,14 +91,14 @@ export class NgMonthPickerComponent implements OnInit, ControlValueAccessor  {
    * @ignore
    */
   ngOnInit() {
-    this.selectedYear = parseInt(moment().format('YYYY'), 10);
+    this.selectedYear = parseInt(dayjs().format('YYYY'), 10);
     this.generateMonths();
   }
 
   writeValue(value) {
     if (value) {
-      this.displayValue = moment(value).format(this.displayFormat);
-      this.controlValue = moment(value).format(this.valueFormat);
+      this.displayValue = dayjs(value).format(this.displayFormat);
+      this.controlValue = dayjs(value).format(this.valueFormat);
       this.setSelectedYearMonth();
       this.onChange(this.controlValue);
       this.onTouch(this.controlValue);
@@ -139,8 +139,8 @@ export class NgMonthPickerComponent implements OnInit, ControlValueAccessor  {
    */
   setValue() {
     if (this.selectedMonth) {
-      this.displayValue = moment(`${this.selectedYear}-${this.selectedMonth}`).format(this.displayFormat);
-      this.controlValue = moment(`${this.selectedYear}-${this.selectedMonth}`).format(this.valueFormat);
+      this.displayValue = dayjs(`${this.selectedYear}-${this.selectedMonth}`).format(this.displayFormat);
+      this.controlValue = dayjs(`${this.selectedYear}-${this.selectedMonth}`).format(this.valueFormat);
       this.setSelectedYearMonth();
       this.onChange(this.controlValue);
       this.onTouch(this.controlValue);
@@ -175,8 +175,8 @@ export class NgMonthPickerComponent implements OnInit, ControlValueAccessor  {
    */
   setSelectedYearMonth() {
     if (this.controlValue) {
-      this.selectedYear = moment(this.controlValue).format('YYYY');
-      this.selectedMonth = moment(this.controlValue).format('MM');
+      this.selectedYear = dayjs(this.controlValue).format('YYYY');
+      this.selectedMonth = dayjs(this.controlValue).format('MM');
     }
   }
 
@@ -198,9 +198,12 @@ export class NgMonthPickerComponent implements OnInit, ControlValueAccessor  {
    * Generate total number of months
    */
   generateMonths() {
-    const months = moment.months().map((month) => {
+    const months =  [
+      'January', 'February', 'March', 'April', 'May', 'June', 'July',
+      'August', 'September', 'October', 'November', 'December'
+    ].map((month, index) => {
       const item = {
-        value: moment().month(month).format('MM'),
+        value: dayjs().month(index ).format('MM'),
         name: month
       };
       return item;
