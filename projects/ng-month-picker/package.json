@@ -1,6 +1,6 @@
 {
   "name": "ng-month-picker",
-  "version": "1.1.0",
+  "version": "1.1.3",
   "author": "Arnaf Aziz Torongo",
   "license": "MIT",
   "repository": {
@@ -25,7 +25,8 @@
     "angular2 montgh picker"
   ],
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "^2.0.0",
+    "dayjs": "^1.9.5"
   },
   "peerDependencies": {
     "@angular/common": "^8.2.14",
