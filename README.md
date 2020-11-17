@@ -48,3 +48,13 @@ Use it in your anywhere in your application
 ````
 <ng-month-picker [(ngModel)]="currentMonth"></ng-month-picker>
 ````
+
+Use it within a form:
+
+````
+<form (ngSubmit)="onSubmit()" #infoForm="ngForm">
+   <input type="text"  name="title" [(ngModel)]="title">
+   <ng-month-picker name="month" [(ngModel)]="currentMonth"></ng-month-picker>
+   <button type="submit">Submit</button>
+</form>
+````
