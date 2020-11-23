@@ -48,3 +48,34 @@ Use it in your anywhere in your application
 ````
 <ng-month-picker [(ngModel)]="currentMonth"></ng-month-picker>
 ````
+
+Example for template-driven form:
+
+````
+// your.component.html
+<form (ngSubmit)="onSubmit()" #infoForm="ngForm">
+   <input type="text"  name="title" [(ngModel)]="title">
+   <ng-month-picker name="month" [(ngModel)]="currentMonth"></ng-month-picker>
+   <button type="submit">Submit</button>
+</form>
+````
+
+Example for reactive form:
+
+````
+// your.component.ts
+import { FormControl } from '@angular/forms';
+export class YourComponent {
+  infoForm = new FormGroup({
+      title: new FormControl(''),
+      currentMonth: new FormControl(null),
+    });
+}
+
+// your.component.html
+<form [formGroup]="infoForm" (ngSubmit)="onSubmit()">
+   <input type="text"  name="title" [formControl]="title">
+   <ng-month-picker name="month" [formControl]="currentMonth"></ng-month-picker>
+   <button type="submit">Submit</button>
+</form>
+````
